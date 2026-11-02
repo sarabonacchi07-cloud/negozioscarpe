@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Official Store - Home</title>
+    <title>Il Tuo Carrello - Jordan Store</title>
     <style>
         * {
             box-sizing: border-box;
@@ -18,7 +18,6 @@
             color: #f4f4f4;
         }
 
-        /* INTESTAZIONE E NAVIGAZIONE */
         header {
             background-color: #000;
             padding: 15px 30px;
@@ -50,140 +49,106 @@
             font-weight: 600;
             font-size: 0.95rem;
             text-transform: uppercase;
-            transition: color 0.3s;
         }
 
         nav a:hover, nav a.active {
             color: #e61025;
         }
 
-        /* HERO BANNER */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(15,15,15,1)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid #222;
-        }
-
-        .badge-novita {
-            background-color: #e61025;
-            color: #fff;
-            padding: 5px 15px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            color: #aaa;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
-        }
-
-        .btn-hero {
-            display: inline-block;
-            background-color: #e61025;
-            color: #fff;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            text-transform: uppercase;
-        }
-
-        /* GRIGLIA PRODOTTI IN EVIDENZA */
         main {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        .titolo-sezione {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+        h1 {
+            font-size: 2rem;
             text-transform: uppercase;
+            margin-bottom: 25px;
             border-left: 4px solid #e61025;
             padding-left: 10px;
         }
 
-        .griglia-prodotti {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
+        .tabella-carrello {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
         }
 
-        .scheda-prodotto {
+        .tabella-carrello th, 
+        .tabella-carrello td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .tabella-carrello th {
+            background-color: #111;
+            color: #e61025;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .item-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .item-info img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .riepilogo-box {
             background-color: #1a1a1a;
             border: 1px solid #2a2a2a;
             border-radius: 8px;
-            flex: 1;
-            min-width: 280px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 25px;
+            max-width: 400px;
+            margin-left: auto;
         }
 
-        .scheda-prodotto img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            background-color: #141414;
-        }
-
-        .info-prodotto {
-            padding: 20px;
-        }
-
-        .info-prodotto h3 {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-
-        .info-prodotto p {
-            color: #aaa;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .prezzo-azione {
+        .riepilogo-riga {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            margin-bottom: 12px;
+            color: #ccc;
         }
 
-        .prezzo {
+        .riepilogo-riga.totale {
             font-size: 1.3rem;
             font-weight: bold;
             color: #fff;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 12px;
+            margin-top: 12px;
         }
 
-        .btn-dettaglio {
-            background-color: #2a2a2a;
+        .btn-cassa {
+            display: block;
+            width: 100%;
+            background-color: #e61025;
             color: #fff;
-            padding: 8px 15px;
+            text-align: center;
+            padding: 14px;
+            border-radius: 6px;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.85rem;
             font-weight: bold;
             text-transform: uppercase;
+            margin-top: 20px;
         }
 
-        .btn-dettaglio:hover {
-            background-color: #e61025;
+        .btn-cassa:hover {
+            background-color: #c00a1d;
         }
 
-        /* FOOTER */
         footer {
             background-color: #000;
             border-top: 1px solid #222;
@@ -200,59 +165,52 @@
     <header>
         <div class="logo">Jordan<span>Store</span></div>
         <nav>
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="prodotto.html">Nuovo Modello</a>
-            <a href="carrello.html">Carrello</a>
+            <a href="carrello.html" class="active">Carrello</a>
         </nav>
     </header>
 
-    <section class="hero">
-        <span class="badge-novita">Lancio Ufficiale 2026</span>
-        <h1>Air Jordan Apex Red</h1>
-        <p>Prestazioni da professionista e stile iconico per la nuova stagione.</p>
-        <a href="prodotto.html" class="btn-hero">Scopri di Più</a>
-    </section>
-
     <main>
-        <h2 class="titolo-sezione">Collezione In Evidenza</h2>
-        <div class="griglia-prodotti">
+        <h1>Il Tuo Carrello</h1>
+
+        <table class="tabella-carrello">
+            <thead>
+                <tr>
+                    <th>Prodotto</th>
+                    <th>Quantità</th>
+                    <th>Prezzo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="item-info">
+                            <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQypk5MSmcxGTx6fvknq2FkxLPBPR8YMZWpXO1XhYF8b8WnFuVyaIj57i-8oN0Ox64BTnVfqRZDolrdS14" alt="Air Jordan Apex Red">
+                            <span>Air Jordan Apex Red (TG 42)</span>
+                        </div>
+                    </td>
+                    <td>1</td>
+                    <td>€ 199,99</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="riepilogo-box">
+            <div class="riepilogo-riga">
+                <span>Subtotale:</span>
+                <span>€ 199,99</span>
+            </div>
+            <div class="riepilogo-riga">
+                <span>Spedizione:</span>
+                <span>Gratuita</span>
+            </div>
+            <div class="riepilogo-riga totale">
+                <span>Totale Ordine:</span>
+                <span>€ 199,99</span>
+            </div>
             
-            <div class="scheda-prodotto">
-                <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Air Jordan 1 High OG Apex Red">
-                <div class="info-prodotto">
-                    <h3>Air Jordan Apex Red</h3>
-                    <p>Modello top di gamma in pelle ed unita Air-Sole incapsulata.</p>
-                    <div class="prezzo-azione">
-                        <span class="prezzo">€ 199,99</span>
-                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scheda-prodotto">
-                <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=600&q=80" alt="Air Jordan Mid Black Edition">
-                <div class="info-prodotto">
-                    <h3>Air Jordan Mid Black</h3>
-                    <p>Design essenziale e profilo medio per uso quotidiano.</p>
-                    <div class="prezzo-azione">
-                        <span class="prezzo">€ 149,99</span>
-                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scheda-prodotto">
-                <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80" alt="Air Jordan Retro White">
-                <div class="info-prodotto">
-                    <h3>Air Jordan Retro White</h3>
-                    <p>L'iconica silhouette classica in pelle bianca e dettagli rossi.</p>
-                    <div class="prezzo-azione">
-                        <span class="prezzo">€ 179,99</span>
-                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
-                    </div>
-                </div>
-            </div>
-
+            <a href="carrello.html" class="btn-cassa">Procedi alla Cassa</a>
         </div>
     </main>
 
