@@ -166,4 +166,145 @@
         .prezzo-box {
             display: flex;
             align-items: baseline;
-            gap: 15
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .prezzo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .disponibilita {
+            color: #2ecc71;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* CARATTERISTICHE TECNICHE */
+        .caratteristiche {
+            list-style: none;
+            margin-bottom: 30px;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 20px;
+        }
+
+        .caratteristiche li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .caratteristiche li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e61025;
+            font-weight: bold;
+        }
+
+        /* PULSANTE DI ACQUISTO */
+        .btn-acquista {
+            display: block;
+            text-align: center;
+            background-color: #e61025;
+            color: #fff;
+            padding: 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-acquista:hover {
+            background-color: #c00a1d;
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #000;
+            border-top: 1px solid #222;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INTESTAZIONE E NAVIGAZIONE -->
+    <header>
+        <div class="logo">Jordan<span>Store</span></div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Novità</a>
+            <a href="#">Uomo</a>
+            <a href="#">Donna</a>
+            <a href="#">Assistenza</a>
+        </nav>
+    </header>
+
+    <!-- BANNER DI PRESENTAZIONE -->
+    <section class="hero">
+        <span class="badge-novita">Lancio Ufficiale 2026</span>
+        <h2>Air Jordan 1 High OG "Apex Red"</h2>
+        <p>L'icona del basket si rinnova con materiali d'avanguardia e design esclusivo.</p>
+    </section>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main>
+        <div class="prodotto-card">
+            
+            <!-- IMMAGINE PRODOTTO -->
+            <div class="prodotto-immagine">
+                <img src="https://via.placeholder.com/500x380/222/e61025?text=Air+Jordan+Apex+Red" alt="Air Jordan 1 High OG Apex Red">
+            </div>
+
+            <!-- DETTAGLI PRODOTTO -->
+            <div class="prodotto-dettagli">
+                <span class="categoria">Edizione Limitata</span>
+                <h3>Air Jordan 1 High OG "Apex Red"</h3>
+                
+                <p class="descrizione">
+                    Progettata per offrire massima reattività e uno stile inconfondibile. Realizzata in pelle pieno fiore con dettagli a rilievo e l'iconica unita Air-Sole incapsulata nel tacco.
+                </p>
+
+                <div class="prezzo-box">
+                    <span class="prezzo">€ 199,99</span>
+                    <span class="disponibilita">● Disponibilità immediata</span>
+                </div>
+
+                <ul class="caratteristiche">
+                    <li>Tomaia in pelle pregiata per massima stabilità</li>
+                    <li>Unità Nike Air nel tallone per un'ammortizzazione leggera</li>
+                    <li>Suola in gomma pieno con intagli di flessione profondi</li>
+                    <li>Colorazione ufficiale: Gym Red / Black / White</li>
+                </ul>
+
+                <a href="#" class="btn-acquista">Aggiungi al Carrello</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- PIÈ DI PAGINA AZIENDALE -->
+    <footer>
+        <p>&copy; 2026 Jordan Store S.p.A. - Tutti i diritti riservati.</p>
+        <p>Progetto Didattico Sviluppo Web - Classe 4ª AFM</p>
+    </footer>
+
+</body>
+</html>
