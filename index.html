@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Store - Nuovo Modello</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #c8102e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #eee;
+        }
+
+        .hero h2 {
+            color: #c8102e;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .prodotto-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .prodotto-immagine {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .prodotto-immagine img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            background-color: #eee;
+        }
+
+        .prodotto-dettagli {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .prodotto-dettagli h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .prezzo {
+            font-size: 1.5rem;
+            color: #c8102e;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .btn-acquista {
+            display: inline-block;
+            background-color: #111;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .btn-acquista:hover {
+            background-color: #c8102e;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JORDAN STORE</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Novità</a>
+        <a href="#">Uomo</a>
+        <a href="#">Donna</a>
+        <a href="#">Contatti</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Lancio Esclusivo</h2>
+            <p>Scopri l'ultima innovazione nel mondo delle sneakers.</p>
+        </section>
+
+        <section class="prodotto-container">
+            <div class="prodotto-immagine">
+                <img src="https://via.placeholder.com/400x300?text=Air+Jordan+Nuovo+Modello" alt="Nuovo modello Air Jordan">
+            </div>
+            
+            <div class="prodotto-dettagli">
+                <h3>Air Jordan 1 High OG "Red Elite"</h3>
+                <p>Un'icona del basket rivisitata in chiave moderna. Realizzata con materiali di prima qualità, inserti in pelle pregiata e l'inconfondibile ammortizzazione Air per il massimo comfort quotidiano.</p>
+                
+                <p class="prezzo">€ 189,99</p>
+
+                <ul>
+                    <li>Colorazione esclusiva Rosso/Nero</li>
+                    <li>Tomaia in vera pelle</li>
+                    <li>Suola in gomma ad alta aderenza</li>
+                </ul>
+
+                <a href="#" class="btn-acquista">Acquista Ora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jordan Store - Progetto Didattico AFM</p>
+    </footer>
+
+</body>
+</html>
