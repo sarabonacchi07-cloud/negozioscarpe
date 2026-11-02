@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Store - Nuovo Modello</title>
+    <title>Jordan Official Store - Nuova Collezione</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,169 +12,158 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #0f0f0f;
+            color: #f4f4f4;
         }
 
+        /* BARRA DI NAVIGAZIONE */
         header {
-            background-color: #111;
+            background-color: #000;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e61025;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 3px;
             color: #fff;
-            padding: 20px 0;
-            text-align: center;
+            text-transform: uppercase;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            background-color: #c8102e;
-            padding: 10px;
-            text-align: center;
+        .logo span {
+            color: #e61025;
         }
 
         nav a {
-            color: #fff;
+            color: #ccc;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav a:hover, nav a.active {
+            color: #e61025;
         }
 
-        main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
+        /* SEZIONE HERO / BANNER */
         .hero {
+            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(15,15,15,1) 100%), url('https://via.placeholder.com/1200x400/111/fff?text=BE+LEGENDARY') no-repeat center center/cover;
+            padding: 60px 20px;
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #eee;
+            border-bottom: 1px solid #222;
+        }
+
+        .badge-novita {
+            background-color: #e61025;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .hero h2 {
-            color: #c8102e;
-            font-size: 2rem;
+            font-size: 2.8rem;
+            text-transform: uppercase;
             margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
-        .prodotto-container {
+        .hero p {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CONTENITORE PRINCIPALE PRODOTTO */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .prodotto-card {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            border: 1px solid #2a2a2a;
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 30px;
-            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .prodotto-immagine {
             flex: 1;
-            min-width: 300px;
-            text-align: center;
+            min-width: 320px;
+            background-color: #141414;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            position: relative;
         }
 
         .prodotto-immagine img {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
+            height: auto;
             border-radius: 8px;
-            background-color: #eee;
+            transition: transform 0.4s ease;
+        }
+
+        .prodotto-immagine:hover img {
+            transform: scale(1.05) rotate(-2deg);
         }
 
         .prodotto-dettagli {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .categoria {
+            color: #e61025;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
 
         .prodotto-dettagli h3 {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
+            line-height: 1.2;
             margin-bottom: 15px;
-        }
-
-        .prezzo {
-            font-size: 1.5rem;
-            color: #c8102e;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .btn-acquista {
-            display: inline-block;
-            background-color: #111;
             color: #fff;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 15px;
         }
 
-        .btn-acquista:hover {
-            background-color: #c8102e;
+        .descrizione {
+            color: #bbb;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
-        footer {
-            background-color: #111;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>JORDAN STORE</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Novità</a>
-        <a href="#">Uomo</a>
-        <a href="#">Donna</a>
-        <a href="#">Contatti</a>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <h2>Lancio Esclusivo</h2>
-            <p>Scopri l'ultima innovazione nel mondo delle sneakers.</p>
-        </section>
-
-        <section class="prodotto-container">
-            <div class="prodotto-immagine">
-                <img src="https://via.placeholder.com/400x300?text=Air+Jordan+Nuovo+Modello" alt="Nuovo modello Air Jordan">
-            </div>
-            
-            <div class="prodotto-dettagli">
-                <h3>Air Jordan 1 High OG "Red Elite"</h3>
-                <p>Un'icona del basket rivisitata in chiave moderna. Realizzata con materiali di prima qualità, inserti in pelle pregiata e l'inconfondibile ammortizzazione Air per il massimo comfort quotidiano.</p>
-                
-                <p class="prezzo">€ 189,99</p>
-
-                <ul>
-                    <li>Colorazione esclusiva Rosso/Nero</li>
-                    <li>Tomaia in vera pelle</li>
-                    <li>Suola in gomma ad alta aderenza</li>
-                </ul>
-
-                <a href="#" class="btn-acquista">Acquista Ora</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Jordan Store - Progetto Didattico AFM</p>
-    </footer>
-
-</body>
-</html>
+        .prezzo-box {
+            display: flex;
+            align-items: baseline;
+            gap: 15
