@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordan Official Store - Nuova Collezione</title>
+    <title>Jordan Official Store - Home</title>
     <style>
         * {
             box-sizing: border-box;
@@ -18,7 +18,7 @@
             color: #f4f4f4;
         }
 
-        /* BARRA DI NAVIGAZIONE */
+        /* INTESTAZIONE E NAVIGAZIONE */
         header {
             background-color: #000;
             padding: 15px 30px;
@@ -57,10 +57,10 @@
             color: #e61025;
         }
 
-        /* SEZIONE HERO / BANNER */
+        /* HERO BANNER */
         .hero {
-            background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(15,15,15,1) 100%), url('https://via.placeholder.com/1200x400/111/fff?text=BE+LEGENDARY') no-repeat center center/cover;
-            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(15,15,15,1)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 80px 20px;
             text-align: center;
             border-bottom: 1px solid #222;
         }
@@ -75,156 +75,112 @@
             border-radius: 20px;
             display: inline-block;
             margin-bottom: 15px;
-            letter-spacing: 1px;
         }
 
-        .hero h2 {
-            font-size: 2.8rem;
+        .hero h1 {
+            font-size: 3rem;
             text-transform: uppercase;
             margin-bottom: 10px;
-            letter-spacing: 1px;
         }
 
         .hero p {
             color: #aaa;
             font-size: 1.1rem;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 25px auto;
         }
 
-        /* CONTENITORE PRINCIPALE PRODOTTO */
+        .btn-hero {
+            display: inline-block;
+            background-color: #e61025;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        /* GRIGLIA PRODOTTI IN EVIDENZA */
         main {
             max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        .prodotto-card {
-            background-color: #1a1a1a;
-            border-radius: 12px;
-            border: 1px solid #2a2a2a;
+        .titolo-sezione {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            border-left: 4px solid #e61025;
+            padding-left: 10px;
+        }
+
+        .griglia-prodotti {
             display: flex;
             flex-wrap: wrap;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            gap: 25px;
         }
 
-        .prodotto-immagine {
-            flex: 1;
-            min-width: 320px;
-            background-color: #141414;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            position: relative;
-        }
-
-        .prodotto-immagine img {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
+        .scheda-prodotto {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
             border-radius: 8px;
-            transition: transform 0.4s ease;
-        }
-
-        .prodotto-immagine:hover img {
-            transform: scale(1.05) rotate(-2deg);
-        }
-
-        .prodotto-dettagli {
             flex: 1;
-            min-width: 320px;
-            padding: 40px;
+            min-width: 280px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
         }
 
-        .categoria {
-            color: #e61025;
+        .scheda-prodotto img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #141414;
+        }
+
+        .info-prodotto {
+            padding: 20px;
+        }
+
+        .info-prodotto h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .info-prodotto p {
+            color: #aaa;
             font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .prodotto-dettagli h3 {
-            font-size: 2.2rem;
-            line-height: 1.2;
             margin-bottom: 15px;
-            color: #fff;
         }
 
-        .descrizione {
-            color: #bbb;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        .prezzo-box {
+        .prezzo-azione {
             display: flex;
-            align-items: baseline;
-            gap: 15px;
-            margin-bottom: 25px;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .prezzo {
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-weight: bold;
             color: #fff;
         }
 
-        .disponibilita {
-            color: #2ecc71;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* CARATTERISTICHE TECNICHE */
-        .caratteristiche {
-            list-style: none;
-            margin-bottom: 30px;
-            border-top: 1px solid #2a2a2a;
-            padding-top: 20px;
-        }
-
-        .caratteristiche li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-
-        .caratteristiche li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #e61025;
-            font-weight: bold;
-        }
-
-        /* PULSANTE DI ACQUISTO */
-        .btn-acquista {
-            display: block;
-            text-align: center;
-            background-color: #e61025;
+        .btn-dettaglio {
+            background-color: #2a2a2a;
             color: #fff;
-            padding: 16px;
-            border-radius: 6px;
+            padding: 8px 15px;
             text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
             font-weight: bold;
-            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s, transform 0.2s;
         }
 
-        .btn-acquista:hover {
-            background-color: #c00a1d;
-            transform: translateY(-2px);
+        .btn-dettaglio:hover {
+            background-color: #e61025;
         }
 
         /* FOOTER */
@@ -237,70 +193,69 @@
             color: #666;
             font-size: 0.85rem;
         }
-
-        footer p {
-            margin-bottom: 5px;
-        }
     </style>
 </head>
 <body>
 
-    <!-- INTESTAZIONE E NAVIGAZIONE -->
     <header>
         <div class="logo">Jordan<span>Store</span></div>
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Novità</a>
-            <a href="#">Uomo</a>
-            <a href="#">Donna</a>
-            <a href="#">Assistenza</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="prodotto.html">Nuovo Modello</a>
+            <a href="carrello.html">Carrello</a>
         </nav>
     </header>
 
-    <!-- BANNER DI PRESENTAZIONE -->
     <section class="hero">
         <span class="badge-novita">Lancio Ufficiale 2026</span>
-        <h2>Air Jordan 1 High OG "Apex Red"</h2>
-        <p>L'icona del basket si rinnova con materiali d'avanguardia e design esclusivo.</p>
+        <h1>Air Jordan Apex Red</h1>
+        <p>Prestazioni da professionista e stile iconico per la nuova stagione.</p>
+        <a href="prodotto.html" class="btn-hero">Scopri di Più</a>
     </section>
 
-    <!-- CONTENUTO PRINCIPALE -->
     <main>
-        <div class="prodotto-card">
+        <h2 class="titolo-sezione">Collezione In Evidenza</h2>
+        <div class="griglia-prodotti">
             
-            <!-- IMMAGINE PRODOTTO -->
-            <div class="prodotto-immagine">
-                <img src="https://via.placeholder.com/500x380/222/e61025?text=Air+Jordan+Apex+Red" alt="Air Jordan 1 High OG Apex Red">
+            <div class="scheda-prodotto">
+                <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Air Jordan 1 High OG Apex Red">
+                <div class="info-prodotto">
+                    <h3>Air Jordan Apex Red</h3>
+                    <p>Modello top di gamma in pelle ed unita Air-Sole incapsulata.</p>
+                    <div class="prezzo-azione">
+                        <span class="prezzo">€ 199,99</span>
+                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- DETTAGLI PRODOTTO -->
-            <div class="prodotto-dettagli">
-                <span class="categoria">Edizione Limitata</span>
-                <h3>Air Jordan 1 High OG "Apex Red"</h3>
-                
-                <p class="descrizione">
-                    Progettata per offrire massima reattività e uno stile inconfondibile. Realizzata in pelle pieno fiore con dettagli a rilievo e l'iconica unita Air-Sole incapsulata nel tacco.
-                </p>
-
-                <div class="prezzo-box">
-                    <span class="prezzo">€ 199,99</span>
-                    <span class="disponibilita">● Disponibilità immediata</span>
+            <div class="scheda-prodotto">
+                <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=600&q=80" alt="Air Jordan Mid Black Edition">
+                <div class="info-prodotto">
+                    <h3>Air Jordan Mid Black</h3>
+                    <p>Design essenziale e profilo medio per uso quotidiano.</p>
+                    <div class="prezzo-azione">
+                        <span class="prezzo">€ 149,99</span>
+                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
+                    </div>
                 </div>
+            </div>
 
-                <ul class="caratteristiche">
-                    <li>Tomaia in pelle pregiata per massima stabilità</li>
-                    <li>Unità Nike Air nel tallone per un'ammortizzazione leggera</li>
-                    <li>Suola in gomma pieno con intagli di flessione profondi</li>
-                    <li>Colorazione ufficiale: Gym Red / Black / White</li>
-                </ul>
-
-                <a href="#" class="btn-acquista">Aggiungi al Carrello</a>
+            <div class="scheda-prodotto">
+                <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80" alt="Air Jordan Retro White">
+                <div class="info-prodotto">
+                    <h3>Air Jordan Retro White</h3>
+                    <p>L'iconica silhouette classica in pelle bianca e dettagli rossi.</p>
+                    <div class="prezzo-azione">
+                        <span class="prezzo">€ 179,99</span>
+                        <a href="prodotto.html" class="btn-dettaglio">Vedi</a>
+                    </div>
+                </div>
             </div>
 
         </div>
     </main>
 
-    <!-- PIÈ DI PAGINA AZIENDALE -->
     <footer>
         <p>&copy; 2026 Jordan Store S.p.A. - Tutti i diritti riservati.</p>
         <p>Progetto Didattico Sviluppo Web - Classe 4ª AFM</p>
